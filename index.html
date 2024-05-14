@@ -9,8 +9,13 @@
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
-        <div class="lista" v-for = "parola, i in myArray">
+        <div class="lista" id="lista" v-for = "parola, i in myArray">
             <li>{{parola}}</li>
+        </div>
+        <div class="lista">
+            <p>Nuova parola: {{ message }}</p>
+            <input v-model="message" placeholder="inserisci nuove parole qui" />
+            <button @click="aggiungiParola()">Submit</button>
         </div>
     </div>
 

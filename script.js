@@ -45,15 +45,23 @@ createApp({
                     'eleifend', 
                     'blandit', 
             ],
+
+            message: ``,
+            nuovaParola: document.createElement(`li`), 
         }
     },
     
     methods: {
+        aggiungiParola(){
+            this.myArray.push(this.message)
+        },
 
+        
     },
 
     mounted(){
         console.log(`Benvenuto`)
+
     }
 
 }).mount('#app')

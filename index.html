@@ -9,8 +9,8 @@
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
-        <div class="lista" id="lista" v-for = "parola, i in myArray">
-            <li>{{parola}}</li>
+        <div class="lista" id="lista" v-for = "(parola, indice) in myArray">
+            <li id="elemento" class="visible">{{parola}} <button @click="rimuoviParola(indice)">X</button></li>
         </div>
         <div class="lista">
             <p>Nuova parola: {{ message }}</p>

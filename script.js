@@ -47,7 +47,7 @@ createApp({
             ],
 
             message: ``,
-            nuovaParola: document.createElement(`li`), 
+            indiceParoleRimosse: null,
         }
     },
     
@@ -56,7 +56,12 @@ createApp({
             this.myArray.push(this.message)
         },
 
-        
+    
+        rimuoviParola(indice){
+            this.indiceParoleRimosse = indice;
+            this.myArray.splice(indice, 1); 
+            this.indiceParoleRimosse = null
+        }
     },
 
     mounted(){

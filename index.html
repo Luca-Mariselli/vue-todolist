@@ -9,14 +9,19 @@
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
-        <div class="lista" id="lista" v-for = "(parola, indice) in myArray">
-            <li id="elemento" class="visible">{{parola}} <button @click="rimuoviParola(indice)">X</button></li>
+
+        <h1>ToDoList JS</h1>
+        <div class="container">
+            <div class="lista" id="lista" v-for = "(parola, indice) in myArray">
+                <li id="elemento">{{parola}} <button id="chiusura" @click="rimuoviParola(indice)">X</button></li>
+            </div>
         </div>
-        <div class="lista">
-            <p>Nuova parola: {{ message }}</p>
-            <input v-model="message" placeholder="inserisci nuove parole qui" />
-            <button @click="aggiungiParola()">Submit</button>
+
+        <div class="bottoni">
+            <input id="sub-input" v-model="message" placeholder="inserisci nuove parole qui" />
+            <button id="submit" @click="aggiungiParola()">Submit</button>
         </div>
+
     </div>
 
     <script src="./script.js"></script>
